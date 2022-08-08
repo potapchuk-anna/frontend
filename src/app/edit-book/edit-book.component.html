@@ -1,0 +1,55 @@
+<h1>Library</h1>
+<div class="add-wrapper">
+  <p *ngIf="!isEdit">Add book</p>
+  <p *ngIf="isEdit">Edit book</p>
+  <hr>
+  <div class="form-wrapper">
+    <div class="form-box-1">
+      <div>
+        <mat-label>Title</mat-label>
+        <mat-form-field appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput [(ngModel)]="newBook.title" required>
+          <mat-error *ngIf="!newBook.title">You must enter title</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-label>Cover</mat-label>
+        <mat-form-field appearance="fill">
+          <mat-label>Choose file...</mat-label>
+          <ngx-mat-file-input accept="image/*" [(ngModel)]="fileInput"></ngx-mat-file-input>
+          <mat-icon matSuffix>folder</mat-icon>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-label>Genre</mat-label>
+        <mat-form-field appearance="fill">
+          <mat-label>Genre</mat-label>
+          <input matInput [(ngModel)]="newBook.genre" required>
+          <mat-error *ngIf="!newBook.genre">You must enter title</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-label>Author</mat-label>
+        <mat-form-field appearance="fill">
+          <mat-label>Author</mat-label>
+          <input matInput [(ngModel)]="newBook.author" required>
+          <mat-error *ngIf="!newBook.author">You must enter title</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-box-2">
+      <mat-label>Content</mat-label>
+      <mat-form-field class="description" appearance="fill">
+        <mat-label>Content</mat-label>
+        <textarea matInput [(ngModel)]="newBook.content" required></textarea>
+        <mat-error *ngIf="!newBook.content">You must enter title</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="form-box-3">
+      <button mat-flat-button class="button-add" [disabled]="!isValid" (click)="onSubmit()" >{{isEdit?'Edit':'Add'}}</button>
+      <button mat-flat-button class="button-clear" (click)="onClear()">Clear</button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,21 @@
+
+<mat-card *ngIf="book" class="item-wrapper">
+  <img mat-card-md-image src="{{book.cover}}">
+  <div class="item-wrapper-box1">
+    <div class="item-wrapper-box2">
+      <mat-card-title>{{book.title}}</mat-card-title>
+      <mat-card-actions class="item-wrapper-box3">
+        <button mat-icon-button (click)="openDialog()">
+          <mat-icon>visibility</mat-icon>
+        </button>
+        <button mat-icon-button (click)="onSelect(book)">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </mat-card-actions>
+    </div>
+    <div class="item-wrapper-box4">
+      <mat-card-content>Review: {{book.reviewsNum}}</mat-card-content>
+      <mat-card-content class="item-wrapper-box4-item">Rating: {{book.rating}}</mat-card-content>
+    </div>
+  </div>
+</mat-card>

@@ -1,0 +1,35 @@
+.item-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+.item-wrapper-box1{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+div .item-wrapper-box2{
+  display: flex;
+  flex-direction: row;
+  margin-left: 1em;
+  width: 100%;
+}
+.item-wrapper-box3{
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: row;
+}
+.item-wrapper-box4{
+  display: flex;
+  flex-direction: row;
+  margin-left: 1em;
+  padding-top: 1em;
+  height: 100%;
+}
+.item-wrapper-box4-item{
+  margin-left: clamp(15px, 30%, 70%);
+}
+mat-card{
+  margin: 1em;
+}

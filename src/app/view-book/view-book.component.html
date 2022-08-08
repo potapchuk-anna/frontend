@@ -1,0 +1,35 @@
+<div class="item-header-wrapper">
+  <h2 mat-dialog-title>Details</h2>
+  <button class="close" mat-button (click)="onNoClick()">X</button>
+</div>
+<mat-dialog-content class="mat-typography">
+  <div *ngIf="data" class="item-wrapper">
+    <div class="item-wrapper-box1">
+      <div class="item-wrapper-box2">
+        <img src="{{data.cover}}">
+        <div class="item-wrapper-box3">
+          <p>Rating: {{data.rating}}</p>
+          <p>Reviews: {{data.reviewsNum}}</p>
+        </div>
+      </div>
+      <div>
+        <h2>{{data.title}}</h2>
+        <div class="item-wrapper-box5">
+          <h3>{{data.author}}</h3>
+          <h3>{{data.genre}}</h3>
+        </div>
+        <mat-dialog-content class="book-content">
+          {{data.content}}
+        </mat-dialog-content>
+      </div>
+    </div>
+      <div  *ngFor="let review of data.reviews">
+        <div *ngIf="review">
+        <hr>
+        <h3>{{review.reviewer}}</h3>
+        <p>{{review.content}}</p>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+

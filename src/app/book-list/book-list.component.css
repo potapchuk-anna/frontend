@@ -1,0 +1,11 @@
+mat-tab-group{
+  margin: 0em 1em;
+}
+.list-wrapper{
+  border: solid 2px black;
+  border-radius: 5px;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
